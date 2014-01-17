@@ -14,18 +14,19 @@
   "bugs": {
     "url": "https://github.com/parroit/auth/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/parroit/auth/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/parroit/auth/blob/master/LICENSE-MIT"
+  }],
   "main": "lib/auth",
   "engines": {
     "node": ">= 0.10.0"
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "promise": "3.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
