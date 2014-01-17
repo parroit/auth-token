@@ -61,7 +61,23 @@ describe("auth", function() {
 
 			
 		});
+		
+		it("return false on expired token", function() {
+			var now = (new Date().getTime()) - 60000*2;
+			
+			var token = auth.makeSessionToken("parroit",1,"test/keys/rsa_priv.pem",now);
+				
+			var result = auth.verifySessionToken(
+				token,
+				"test/keys/rsa_pub.pem"
+			);
+			
+			expect(result)
+				.to.be.equal(false);
 
+			
+		});
+		
 		it("return false on invalid token", function() {
 			var token = auth.makeSessionToken("parroit",10,"test/keys/rsa_priv.pem");
 			

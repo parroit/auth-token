@@ -523,7 +523,7 @@
 			"file": "lib/auth.js",
 			"settings":
 			{
-				"buffer_size": 2431,
+				"buffer_size": 2709,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "test/auth_test.js",
 			"settings":
 			{
-				"buffer_size": 1785,
+				"buffer_size": 2115,
 				"line_ending": "Windows"
 			}
 		},
@@ -1066,7 +1066,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1075,44 +1075,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2431,
+						"buffer_size": 2709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2416,
-								2416
-							]
-						],
-						"settings":
-						{
-							"nodePath": "node",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2958.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "test/auth_test.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1785,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1785,
-								1785
+								1773,
+								1793
 							]
 						],
 						"settings":
@@ -1122,10 +1093,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1392.0,
+						"translation.y": 2523.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "test/auth_test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1796,
+								1796
+							]
+						],
+						"settings":
+						{
+							"nodePath": "node",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1803.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
