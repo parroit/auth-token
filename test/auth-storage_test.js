@@ -22,7 +22,9 @@ describe("AuthStorage", function() {
 			authStorage.saveUser({
 				username:"parroit",
 				password:"piripicchio",
-				fullname: "Andrea Parodi"
+				fullname: "Andrea Parodi",
+				email: "andrea.parodi@ebansoftware.net",
+				status: "pending"
 			})
 				.then(function(results){
 					getParroit(function(usr){
@@ -66,19 +68,27 @@ describe("AuthStorage", function() {
 			
 		});
 
-		it("returned user is object",function(){
+		it("user is object",function(){
 			expect(user).to.be.an("object");
 		});
 
-		it("returned user has username",function(){
+		it("user has email",function(){
+			expect(user.email).to.be.equal("andrea.parodi@ebansoftware.net");
+		});
+
+		it("user has username", function() {
 			expect(user.username).to.be.equal("parroit");
 		});
 
-		it("returned user has fullname",function(){
+		it("user has fullname",function(){
 			expect(user.fullname).to.be.equal("Andrea Parodi");
 		});
-
-		it("returned user has password hash",function(){
+		
+		it("user has status",function(){
+			expect(user.status).to.be.equal("pending");
+		});
+		
+		it("user has password hash",function(){
 			expect(user.password).to.be.a("string");
 		});
 	});
