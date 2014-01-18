@@ -35,7 +35,7 @@ describe("auth", function() {
 		it("return a different token each time", function() {
 			var tokens = {},
 				i = 0,
-				l = 100;
+				l = process.env.TOKEN_RETRY;
 
 			for (; i < l; i++) {
 				var token = auth.makeSessionToken("parroit", 10, "test/keys/rsa_priv.pem");
