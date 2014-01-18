@@ -1,5 +1,60 @@
 
 
+<!-- Start lib/auth-storage.js -->
+
+auth
+https://github.com/parroit/auth
+
+Copyright (c) 2014 Andrea Parodi
+Licensed under the MIT license.
+
+## AuthStorage(options)
+
+This object allows to manage users
+within storage.
+
+### Params: 
+
+* **Object** *options* configuration options for object
+
+## saveUser(user)
+
+Save a user into storage.
+
+### Params: 
+
+* **Object** *user* the user object to save
+
+### Return:
+
+* **Object** a promise fullfilled with {status: &quot;ok&quot;}
+
+## getUser(username)
+
+Retrieve a user from storage by name.
+
+### Params: 
+
+* **String** *username* the username of the user to retrieve
+
+### Return:
+
+* **Object** a promise fullfilled with user object
+
+## removeUser(username)
+
+Remove a user from storage.
+
+### Params: 
+
+* **String** *username* username of user to remove
+
+### Return:
+
+* **Object** a promise fullfilled with {status: &quot;ok&quot;}
+
+<!-- End lib/auth-storage.js -->
+
 <!-- Start lib/auth.js -->
 
 auth
@@ -60,11 +115,17 @@ This object manage authorization.
 
 * **storage** *{Object}* an AuthStorage instance to use for persistence
 
-## login()
+## login(username, password)
 
 Verify user login credential.
 On success, promise fullfilled value contains property token
 which is a valid session token.
+
+### Params: 
+
+* **String** *username* username to validate
+
+* **String** *password* password to validate, in clear form
 
 ### Return:
 
@@ -115,59 +176,4 @@ It store modified user on storage after performing of these steps:
 * **a** promise that is fullfilled with {valid:true, password: &quot;the user pasword&quot;}
 
 <!-- End lib/auth.js -->
-
-<!-- Start lib/auth-storage.js -->
-
-auth
-https://github.com/parroit/auth
-
-Copyright (c) 2014 Andrea Parodi
-Licensed under the MIT license.
-
-## AuthStorage({Object})
-
-This object allows to manage users
-within storage.
-
-### Params: 
-
-* **options** *{Object}* configuration options for object
-
-## saveUser({Object})
-
-Save a user into storage.
-
-### Params: 
-
-* **user** *{Object}* the user object to save
-
-### Return:
-
-* **Object** a promise fullfilled with {status: &quot;ok&quot;}
-
-## getUser({String})
-
-Retrieve a user from storage by name.
-
-### Params: 
-
-* **username** *{String}* - the username of the user to retrieve
-
-### Return:
-
-* **Object** a promise fullfilled with user object
-
-## removeUser({String})
-
-Remove a user from storage.
-
-### Params: 
-
-* **username** *{String}* username of user to remove
-
-### Return:
-
-* **Object** a promise fullfilled with {status: &quot;ok&quot;}
-
-<!-- End lib/auth-storage.js -->
 
