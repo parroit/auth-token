@@ -12,7 +12,7 @@ auth.awesome(); // "awesome"
 ```
 
 ## Documentation
-_(Coming soon)_
+See [](docs/readme.md)
 
 ## Examples
 _(Coming soon)_
