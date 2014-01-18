@@ -1,25 +1,23 @@
 {
-  "name": "auth",
-  "description": "The best project ever.",
+  "name": "auth-token",
+  "description": "issues crypto-signed authentication token",
   "version": "0.1.0",
-  "homepage": "https://github.com/parroit/auth",
+  "homepage": "https://github.com/parroit/auth-token",
   "author": {
     "name": "Andrea Parodi",
     "email": "andrea.parodi@ebansoftware.net"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/parroit/auth.git"
+    "url": "git://github.com/parroit/auth-token.git"
   },
   "bugs": {
-    "url": "https://github.com/parroit/auth/issues"
+    "url": "https://github.com/parroit/auth-token/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/parroit/auth/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/parroit/auth-token/blob/master/LICENSE-MIT"
+  }],
   "main": "lib/auth",
   "engines": {
     "node": ">= 0.10.0"

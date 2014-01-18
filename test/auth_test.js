@@ -27,8 +27,8 @@ describe("auth", function() {
 		});
 
 		it("return a base64 token", function() {
-			var token = auth.makeSessionToken("parroit",10,"test/keys/rsa_priv.pem");
-			
+			var token = auth.makeSessionToken("parroit", 10, "test/keys/rsa_priv.pem");
+
 			expect(token.length).to.be.greaterThan(300);
 		});
 
@@ -37,12 +37,12 @@ describe("auth", function() {
 				i = 0,
 				l = 100;
 
-			for (; i<l; i++) {
-				var token = auth.makeSessionToken("parroit",10,"test/keys/rsa_priv.pem");
-				expect(token in tokens).to.be.equal(false);	
+			for (; i < l; i++) {
+				var token = auth.makeSessionToken("parroit", 10, "test/keys/rsa_priv.pem");
+				expect(token in tokens).to.be.equal(false);
 				tokens[token] = true;
 			}
-			
+
 		});
 	});
 
@@ -52,44 +52,44 @@ describe("auth", function() {
 		});
 
 		it("return true on valid token", function() {
-			var token = auth.makeSessionToken("parroit",10,"test/keys/rsa_priv.pem");
-			
-			var result = auth.verifySessionToken(token,"test/keys/rsa_pub.pem");
-			
+			var token = auth.makeSessionToken("parroit", 10, "test/keys/rsa_priv.pem");
+
+			var result = auth.verifySessionToken(token, "test/keys/rsa_pub.pem");
+
 			expect(result)
 				.to.be.equal(true);
 
-			
+
 		});
-		
+
 		it("return false on expired token", function() {
-			var now = (new Date().getTime()) - 60000*2;
-			
-			var token = auth.makeSessionToken("parroit",1,"test/keys/rsa_priv.pem",now);
-				
+			var now = (new Date().getTime()) - 60000 * 2;
+
+			var token = auth.makeSessionToken("parroit", 1, "test/keys/rsa_priv.pem", now);
+
 			var result = auth.verifySessionToken(
 				token,
 				"test/keys/rsa_pub.pem"
 			);
-			
+
 			expect(result)
 				.to.be.equal(false);
 
-			
+
 		});
-		
+
 		it("return false on invalid token", function() {
-			var token = auth.makeSessionToken("parroit",10,"test/keys/rsa_priv.pem");
-			
+			var token = auth.makeSessionToken("parroit", 10, "test/keys/rsa_priv.pem");
+
 			var result = auth.verifySessionToken(
-				token.replace(/parroit/g,"beep-boop"),
+				token.replace(/parroit/g, "beep-boop"),
 				"test/keys/rsa_pub.pem"
 			);
-			
+
 			expect(result)
 				.to.be.equal(false);
 
-			
+
 		});
 	});
 });
