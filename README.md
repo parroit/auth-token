@@ -1,12 +1,12 @@
-# auth-storage
-[![Build Status](https://secure.travis-ci.org/parroit/auth-storage.png?branch=master)](http://travis-ci.org/parroit/auth-storage)  [![Npm module](https://badge.fury.io/js/auth-storage.png)](https://npmjs.org/package/auth-storage) [![Code Climate](https://codeclimate.com/github/parroit/auth-storage.png)](https://codeclimate.com/github/parroit/auth-storage)
+# auth-token
+[![Build Status](https://secure.travis-ci.org/parroit/auth-token.png?branch=master)](http://travis-ci.org/parroit/auth-token)  [![Npm module](https://badge.fury.io/js/auth-token.png)](https://npmjs.org/package/auth-token) [![Code Climate](https://codeclimate.com/github/parroit/auth-token.png)](https://codeclimate.com/github/parroit/auth-token)
 
 issues crypto-signed authentication token
 
 ##STAY AWAY! WORK IN PROGRESS
 
 # Getting Started
-Install the module with: `npm install auth-storage --save`
+Install the module with: `npm install auth-token --save`
 
 
 ## Documentation
