@@ -63,57 +63,57 @@ https://github.com/parroit/auth
 Copyright (c) 2014 Andrea Parodi
 Licensed under the MIT license.
 
-## makeHash({String})
+## makeHash(password)
 
 This function allows to create a password hash.
 
 ### Params: 
 
-* **password** *{String}* 
+* **String** *password* 
 
 ### Return:
 
 * **md5** hash of password
 
-## verifySessionToken({String}, {String})
+## verifySessionToken(token, keyPath)
 
 This function verify authenticity of a session token.
 
 ### Params: 
 
-* **token** *{String}* the token to verify
+* **String** *token* the token to verify
 
-* **keyPath** *{String}* path of a public key in PEM format
+* **String** *keyPath* path of a public key in PEM format
 
 ### Return:
 
 * **true** if token authenticity is proved, false otherwise
 
-## makeSessionToken({String}, {Number}, {String}, {Number})
+## makeSessionToken(username, expirationMinutes, keyPath, now)
 
 This function allows to create a session token for a user.
 
 ### Params: 
 
-* **username** *{String}* 
+* **String** *username* 
 
-* **expirationMinutes** *{Number}* the token expire within this number of minutes
+* **Number** *expirationMinutes* the token expire within this number of minutes
 
-* **keyPath** *{String}* path of a private key in PEM format
+* **String** *keyPath* path of a private key in PEM format
 
-* **now** *{Number}* millisecond from epoch to use as creation time. Defaults to actual time. Mainly used for tests
+* **Number** *now* millisecond from epoch to use as creation time. Defaults to actual time. Mainly used for tests
 
 ### Return:
 
 * **a** new session token
 
-## Auth({Object})
+## Auth(storage)
 
 This object manage authorization.
 
 ### Params: 
 
-* **storage** *{Object}* an AuthStorage instance to use for persistence
+* **Object** *storage* an AuthStorage instance to use for persistence
 
 ## login(username, password)
 
