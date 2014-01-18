@@ -142,7 +142,6 @@ It store new user after performing of these steps:
 4. create a crypto strong random password, and add it to the user object
 5. set user status property to `pending`
 6. create a crypto strong random confirmation ticket, and add it to the confirmation property
-7. send an email to the user address, including the confirmation
 
 ### Params: 
 
@@ -153,6 +152,46 @@ It store new user after performing of these steps:
 ### Return:
 
 * **a** promise that is fullfilled with {valid:true, confirmation: &quot;the confirmation ticket&quot;}
+
+## destroyUser(sessionToken)
+
+Start destroy of a user.
+It perform following steps:
+
+1. check that session token is a valid one
+2. check that username who own the token exists
+3. check that user status is `confirmed`
+2. set user status property to `destroy-requested`
+6. create a crypto strong random confirmation ticket, and add it to the confirmation property
+7. send an email to the user address, including the confirmation
+
+### Params: 
+
+* **String** *sessionToken* 	a valid session token. it must be owned by user we want to destroy
+
+### Return:
+
+* **a** promise that is fullfilled with {valid:true, confirmation: &quot;the confirmation ticket&quot;}
+
+## confirmDestroyUser(sessionToken, confirmationTicket)
+
+Confirm a user destroy.
+It destroy user from storage after performing of these steps:
+
+1. check that session token is a valid one
+2. check that username who own the token exists
+3. check that user status is `destroy-requested`
+4. verify that `confirmationTicket` is equal to that saved on user object
+
+### Params: 
+
+* **String** *sessionToken* 	a valid session token. it must be owned by user we want to destroy
+
+* **String** *confirmationTicket* confirmation ticket issued by a call to `destroyUser`
+
+### Return:
+
+* **a** promise that is fullfilled with {valid:true, password: &quot;the user pasword&quot;}
 
 ## confirmUser(username, confirmationTicket)
 
