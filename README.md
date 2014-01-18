@@ -10,7 +10,7 @@ Install the module with: `npm install auth --save`
 
 
 ## Documentation
-See [docs folder](docs/readme.md)
+See [docs folder](docs/README.md)
 
 
 ## Contributing
