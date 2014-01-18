@@ -3,19 +3,15 @@
 
 issues crypto-signed authentication token
 
-## Getting Started
+##STAY AWAY! WORK IN PROGRESS
+
+# Getting Started
 Install the module with: `npm install auth --save`
 
-```javascript
-var auth = require('auth');
-auth.awesome(); // "awesome"
-```
 
 ## Documentation
 See [docs folder](docs/readme.md)
 
-## Examples
-_(Coming soon)_
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style.
