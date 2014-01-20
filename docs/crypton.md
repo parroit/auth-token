@@ -20,6 +20,22 @@ This function allows to create a password hash.
 
 * **md5** hash of password
 
+## mkPwd()
+
+Create a cryptografic strong random password
+
+### Return:
+
+* **String** the generated password
+
+## mkID()
+
+Create a cryptografic strong id
+
+### Return:
+
+* **String** the generated id
+
 ## verifySessionToken(token, keyPath)
 
 This function verify authenticity of a session token.
