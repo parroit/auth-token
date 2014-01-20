@@ -21,6 +21,33 @@ describe("crypton", function() {
 		});
 	});
 
+	describe("mkPwd", function() {
+		var pwd = crypton.mkPwd();
+
+		it("is defined", function() {
+			expect(crypton.mkPwd).to.be.an("function");
+		});
+
+		it("return a string", function() {
+
+			expect(pwd).to.be.a("string");
+		});
+
+		it("return different password each time", function() {
+			var pwds = {},
+				i = 0,
+				times = 1000;
+
+			for (; i < times; i++) {
+				var pwd = crypton.mkPwd();
+
+				expect(pwds[pwd]).to.be.equal(undefined);
+				pwds[pwd] = true;
+			}
+		});
+
+	});
+
 	describe("makeSessionToken", function() {
 		it("is defined", function() {
 			expect(crypton.makeSessionToken).to.be.an("function");
