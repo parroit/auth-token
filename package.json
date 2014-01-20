@@ -14,10 +14,12 @@
   "bugs": {
     "url": "https://github.com/parroit/auth-token/issues"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "https://github.com/parroit/auth-token/blob/master/LICENSE-MIT"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/parroit/auth-token/blob/master/LICENSE-MIT"
+    }
+  ],
   "main": "lib/auth",
   "engines": {
     "node": ">= 0.10.0"
@@ -26,14 +28,16 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "promise": "3.2.0",
-    "node-uuid": "~1.4.1"
+    "promise": "~3.2.0",
+    "node-uuid": "~1.4.1",
+    "email-validation": "0.0.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-mocha-test": "~0.7.0",
     "expect.js": "~0.2.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-markdox": "~0.1.0"
   },
   "keywords": []
 }

@@ -16,8 +16,16 @@ module.exports = function(grunt) {
         markdox: {
 
             sourceFiles: {
-                src: 'lib/*.js',
-                dest: 'docs/README.md'
+                files: [{
+                    src: 'lib/auth-storage.js',
+                    dest: 'docs/auth-storage.md'
+                }, {
+                    src: 'lib/crypton.js',
+                    dest: 'docs/crypton.md'
+                }, {
+                    src: 'lib/auth.js',
+                    dest: 'docs/auth.md'
+                }]
             }
         },
         mochaTest: {
