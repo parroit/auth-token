@@ -36,13 +36,39 @@ describe("crypton", function() {
 		it("return different password each time", function() {
 			var pwds = {},
 				i = 0,
-				times = 1000;
+				times = process.env.TOKEN_RETRY;
 
 			for (; i < times; i++) {
 				var pwd = crypton.mkPwd();
 
 				expect(pwds[pwd]).to.be.equal(undefined);
 				pwds[pwd] = true;
+			}
+		});
+
+	});
+
+	describe("mkID", function() {
+		var id = crypton.mkID();
+
+		it("is defined", function() {
+			expect(crypton.mkID).to.be.an("function");
+		});
+
+		it("return a string", function() {
+
+			expect(id).to.be.a("string");
+		});
+
+		it("return different password each time", function() {
+			var ids = {},
+				i = 0,
+				times = process.env.TOKEN_RETRY;
+
+			for (; i < times; i++) {
+				var id = crypton.mkID();
+				expect(ids[id]).to.be.equal(undefined);
+				ids[id] = true;
 			}
 		});
 

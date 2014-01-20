@@ -90,6 +90,17 @@ describe("Auth", function() {
 				expect(user.email).to.be.equal("a@b.c");
 
 			});
+
+			it("has password", function() {
+				expect(user.password).to.be.a("string");
+				expect(user.password.length).to.be.equal(10);
+
+			});
+
+			it("has pending status", function() {
+				expect(user.status).to.be.equal("pending");
+
+			});
 		});
 
 
